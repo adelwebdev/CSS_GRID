@@ -1,0 +1,50 @@
+/*# sourceMappingURL=style.css.map */
+
+body {
+  margin: 0px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 150px;
+  grid-template-areas:
+    "a a a"
+    "b c c"
+    "d d e"
+    "f f f";
+}
+.bloc:nth-child(1) {
+  background: darkorchid;
+  grid-area: a;
+}
+.bloc:nth-child(2) {
+  background: yellowgreen;
+  grid-area: b;
+}
+.bloc:nth-child(3) {
+  background: pink;
+  grid-area: c;
+}
+.bloc:nth-child(4) {
+  background: brown;
+  grid-area: d;
+}
+.bloc:nth-child(5) {
+  background: orangered;
+  grid-area: e;
+}
+.bloc:nth-child(6) {
+  background: violet;
+  grid-area: f;
+}
+@media screen and (max-width: 800px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 400px 200px 250px 200px;
+    grid-template-areas:
+      "a a a a"
+      "f b c d"
+      "f e e e"
+      "f e e e";
+  }
+}
